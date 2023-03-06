@@ -1,0 +1,28 @@
+{
+  "namespace": "com.json.vs.avro.jsonvsavro.domain",
+  "type": "record",
+  "name": "Event",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "payload",
+      "type": {
+        "name": "Payment",
+        "type": "record",
+        "fields": [
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "value",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
